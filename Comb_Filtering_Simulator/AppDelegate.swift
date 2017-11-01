@@ -7,6 +7,26 @@
 //
 
 import Cocoa
+import AppKit
+
+
+//******************** Globals ********************
+//*************************************************
+
+
+
+
+
+
+
+
+//******************* Colors **********************
+//*************************************************
+
+let graphBackgroundColor: CGColor = CGColor(red: 0.2, green: 0.5, blue: 0.8, alpha: 0.08) //background for graphs
+let gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.4)
+let axisColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.5)
+
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -14,9 +34,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        
+       
+        
+        
+        
+        
+        
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }

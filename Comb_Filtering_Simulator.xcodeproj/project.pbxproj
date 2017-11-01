@@ -13,6 +13,7 @@
 		5E7EFE1A1FA8069900347312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7EFE181FA8069900347312 /* Main.storyboard */; };
 		5E7EFE251FA8069900347312 /* Comb_Filtering_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EFE241FA8069900347312 /* Comb_Filtering_SimulatorTests.swift */; };
 		5E7EFE301FA8069900347312 /* Comb_Filtering_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EFE2F1FA8069900347312 /* Comb_Filtering_SimulatorUITests.swift */; };
+		5E7EFE3E1FA8308500347312 /* LogGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EFE3D1FA8308500347312 /* LogGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		5E7EFE2B1FA8069900347312 /* Comb_Filtering_SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Comb_Filtering_SimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7EFE2F1FA8069900347312 /* Comb_Filtering_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comb_Filtering_SimulatorUITests.swift; sourceTree = "<group>"; };
 		5E7EFE311FA8069900347312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7EFE3D1FA8308500347312 /* LogGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				5E7EFE141FA8069800347312 /* ViewController.swift */,
 				5E7EFE161FA8069800347312 /* Assets.xcassets */,
 				5E7EFE181FA8069900347312 /* Main.storyboard */,
+				5E7EFE3D1FA8308500347312 /* LogGridView.swift */,
 				5E7EFE1B1FA8069900347312 /* Info.plist */,
 			);
 			path = Comb_Filtering_Simulator;
@@ -257,6 +260,7 @@
 			files = (
 				5E7EFE151FA8069800347312 /* ViewController.swift in Sources */,
 				5E7EFE131FA8069800347312 /* AppDelegate.swift in Sources */,
+				5E7EFE3E1FA8308500347312 /* LogGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +406,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Comb_Filtering_Simulator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.georgedubrik.Comb-Filtering-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -415,6 +420,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Comb_Filtering_Simulator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.georgedubrik.Comb-Filtering-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
