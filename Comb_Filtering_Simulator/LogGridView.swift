@@ -8,6 +8,8 @@
 
 import Cocoa
 
+@IBDesignable
+
 class LogGridView: NSView {
 
     override func draw(_ dirtyRect: NSRect) {
@@ -27,12 +29,8 @@ class LogGridView: NSView {
         
      //**********************************************************
      //******************* gridlines ****************************
-        Swift.print(self.bounds)
-        
-        
-        
       
-        
+
         
      //*********** y dB grid ************************************
         
@@ -45,32 +43,31 @@ class LogGridView: NSView {
             
         }
         
-
-
         gridColor.setStroke()
         gridLevelAxis.lineWidth = 0.5
         gridLevelAxis.stroke()
         
-    
-     //**************** y axis highlight ******************************
+      //*************************************************************
+     //**************** y axis highlight ****************************
         
-        let frequencyGridHighlights = NSBezierPath() //grid and axis lines...in this case only draw zero axis at division 7
+        let levelGridHighlights = NSBezierPath() //grid and axis lines...in this case only draw zero axis at division 7
         
         for i in stride(from: 0, to: yDivisions, by: 7) {
             
-            frequencyGridHighlights.move(to: NSPoint(x:self.bounds.origin.x, y: (self.bounds.height / CGFloat(yDivisions)) * CGFloat(i)  )  )
+            levelGridHighlights.move(to: NSPoint(x:self.bounds.origin.x, y: (self.bounds.height / CGFloat(yDivisions)) * CGFloat(i)  )  )
             
-            frequencyGridHighlights.line(to: NSPoint(x: self.bounds.origin.x + self.bounds.width, y: (self.bounds.size.height / CGFloat(yDivisions)) * CGFloat(i) )  )
+            levelGridHighlights.line(to: NSPoint(x: self.bounds.origin.x + self.bounds.width, y: (self.bounds.size.height / CGFloat(yDivisions)) * CGFloat(i) )  )
             
         }
         
         axisColor.setStroke()
-        frequencyGridHighlights.lineWidth = 1
-        frequencyGridHighlights.stroke()
+        levelGridHighlights.lineWidth = 1
+        levelGridHighlights.stroke()
        
         
-        
-        //**************** x freq grid ******************************
+        //*************************************************************
+        //*************************************************************
+        //**************** x freq grid ********************************
         
         let gridFrequencyAxis = NSBezierPath() //grid lines
         
@@ -80,40 +77,57 @@ class LogGridView: NSView {
             
             for k in stride(from: 2, to: 11, by: 1) {
                 
-             
                 
-                 let frequencyScaleValue = log10(Float(j * k)) - 1
+                let frequencyScaleValue = log10(Float(j * k)) - 1 // frequency scale start with 10 not zero
                 
-                  let  XValue = Float(self.bounds.width/3) * frequencyScaleValue
-                
+                let  XValue = Float(self.bounds.width/3) * frequencyScaleValue
                 
                 
-                 gridFrequencyAxis.move(to: NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y))
-                 gridFrequencyAxis.line(to: NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y + self.bounds.height))
-       
-                gridColor.setStroke()
-                gridFrequencyAxis.lineWidth = 0.5
-               
-
- Swift.print("line from  \(NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y))   to \(NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y + self.bounds.height))")
-    
-//Swift.print("xxxxxxxxx\(NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y))")
-//Swift.print("to\(NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y +  self.bounds.height ))")
-  
-// Swift.print(" number = \(j * k) scalevalue = \(XValue)")
-                
-//Swift.print(frequencyScaleValue)
+                gridFrequencyAxis.move(to: NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y))
+                gridFrequencyAxis.line(to: NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y + self.bounds.height))
                 
                 
-            } //end k loop
+            } //----end k loop
             
             
-            
-        } // end i loop
+        } // ----end i loop
         
+        gridColor.setStroke()
+        gridFrequencyAxis.lineWidth = 0.5
         gridFrequencyAxis.stroke()
        
+        //*************************************************************
+        //*************************************************************
+        //**************** x freq highlights **************************
         
+        
+        let highlightFrequencyAxis = NSBezierPath() //grid lines
+        
+        for i in stride(from: 1, to: 4, by: 1) {
+            
+            let j = Int(pow(Double(10), Double(i)) )
+            
+            //avoid zero for log so use 0.001 in counter
+            for k in stride(from: 0.001, to: 11, by: 5) {
+                
+                
+                let frequencyScaleValue = log10(Float(Double(j) * k)) - 1 // frequency scale start with 10 not zero
+                
+                let  XValue = Float(self.bounds.width/3) * frequencyScaleValue
+                
+                
+                highlightFrequencyAxis.move(to: NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y))
+                highlightFrequencyAxis.line(to: NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y + self.bounds.height))
+                
+                
+            } //----end k loop
+            
+            
+        } // ----end i loop
+        
+        axisColor.setStroke()
+        highlightFrequencyAxis.lineWidth = 1
+        highlightFrequencyAxis.stroke()
         
         
         

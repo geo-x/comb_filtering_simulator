@@ -14,6 +14,7 @@
 		5E7EFE251FA8069900347312 /* Comb_Filtering_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EFE241FA8069900347312 /* Comb_Filtering_SimulatorTests.swift */; };
 		5E7EFE301FA8069900347312 /* Comb_Filtering_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EFE2F1FA8069900347312 /* Comb_Filtering_SimulatorUITests.swift */; };
 		5E7EFE3E1FA8308500347312 /* LogGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EFE3D1FA8308500347312 /* LogGridView.swift */; };
+		5E7EFE401FA9B61700347312 /* bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EFE3F1FA9B61700347312 /* bits.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5E7EFE2F1FA8069900347312 /* Comb_Filtering_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comb_Filtering_SimulatorUITests.swift; sourceTree = "<group>"; };
 		5E7EFE311FA8069900347312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E7EFE3D1FA8308500347312 /* LogGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogGridView.swift; sourceTree = "<group>"; };
+		5E7EFE3F1FA9B61700347312 /* bits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bits.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				5E7EFE161FA8069800347312 /* Assets.xcassets */,
 				5E7EFE181FA8069900347312 /* Main.storyboard */,
 				5E7EFE3D1FA8308500347312 /* LogGridView.swift */,
+				5E7EFE3F1FA9B61700347312 /* bits.swift */,
 				5E7EFE1B1FA8069900347312 /* Info.plist */,
 			);
 			path = Comb_Filtering_Simulator;
@@ -261,6 +264,7 @@
 				5E7EFE151FA8069800347312 /* ViewController.swift in Sources */,
 				5E7EFE131FA8069800347312 /* AppDelegate.swift in Sources */,
 				5E7EFE3E1FA8308500347312 /* LogGridView.swift in Sources */,
+				5E7EFE401FA9B61700347312 /* bits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
