@@ -28,6 +28,8 @@ let gridColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, al
 let axisColor = NSColor(calibratedHue: 0.8, saturation: 0.8, brightness: 0.1, alpha: 0.5)
 
 
+
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
