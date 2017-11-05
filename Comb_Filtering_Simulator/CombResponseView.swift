@@ -18,13 +18,16 @@ class CombResponseView: NSView {
         
         combResponse.move(to: NSPoint(x: 0, y: Int(polarResponse.reponseForFrequency(frequencyToInspect:10))))
         
-        for i:Float in stride(from: 11, to: 10000, by: 1) {
+        for i:Float in stride(from: 10, to: 10000, by: 1) {
             
            let xValue = log10(i) - 1
            let xPosition = Int( Float(self.bounds.width/3) * xValue  )
+           let dBValue = polarResponse.reponseForFrequency(frequencyToInspect:i)
+           let yPosition = (dBValue + 35) * 4
             
+            combResponse.line(to: NSPoint(x: xPosition, y: Int(yPosition)))
             
-           combResponse.line(to: NSPoint(x: xPosition, y: Int(polarResponse.reponseForFrequency(frequencyToInspect:i))))
+           //combResponse.line(to: NSPoint(x: xPosition, y: Int(polarResponse.reponseForFrequency(frequencyToInspect:i))))
             
   Swift.print("frequency = \(i)")
   Swift.print("~~~~~~~~~")
@@ -32,7 +35,7 @@ class CombResponseView: NSView {
         }
         
         combResponseColor.setStroke()
-        combResponse.lineWidth = 0.5
+        combResponse.lineWidth = 1
         combResponse.stroke()
         
         

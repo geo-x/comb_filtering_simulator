@@ -10,7 +10,7 @@ import Cocoa
 import AppKit
 
 
-var polarResponse:CombFilteringResponse = CombFilteringResponse( time: 1.0)
+var polarResponse:CombFilteringResponse = CombFilteringResponse( time: 10.0)
 
 //globals
 
