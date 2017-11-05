@@ -16,7 +16,7 @@ class LogGridView: NSView {
         super.draw(dirtyRect)
         
         let yDivisions:Int = 10 // dB -infinity(-40 dB) to +10dB
-        let xDivisions:Int = 30  //log 10 to 10,000
+        //let xDivisions:Int = 30  //log 10 to 10,000
         
         
         
@@ -80,7 +80,7 @@ class LogGridView: NSView {
                 
                 let frequencyScaleValue = log10(Float(j * k)) - 1 // frequency scale start with 10 not zero
                 
-                let  XValue = Float(self.bounds.width/3) * frequencyScaleValue
+                let  XValue = Float(self.bounds.width/3) * frequencyScaleValue // converts the x numeric value to a position on the graph
                 
                 
                 gridFrequencyAxis.move(to: NSPoint(x: CGFloat(XValue), y: self.bounds.origin.y))

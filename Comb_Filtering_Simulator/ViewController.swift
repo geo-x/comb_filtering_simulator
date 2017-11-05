@@ -22,9 +22,9 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         Swift.print(polarResponse.fundamantalCancellation)
-//         Swift.print(polarResponse.phaseShift(frequencyToInspect: 1000))
-         Swift.print("\(polarResponse.reponseForFrequency(frequencyToInspect: 1000)) dB") // this shoulfd be -35dB
+//Swift.print(polarResponse.fundamantalCancellation)
+//Swift.print(polarResponse.phaseShift(frequencyToInspect: 1000))
+//Swift.print("******\(polarResponse.reponseForFrequency(frequencyToInspect: 500)) dB") // this shoulfd be -35dB
         
         // Do any additional setup after loading the view.
     }
