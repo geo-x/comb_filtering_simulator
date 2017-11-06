@@ -75,9 +75,9 @@ class CombFilteringResponse: NSObject {
         let degreesShift = phaseShift(frequencyToInspect: frequencyToInspect)
        
         var sensitivityForFrequency = (sin((90 + (degreesShift/2)).degreesToRadians)) * 2  //relative sensitity from 0 to 2
- Swift.print(" from inside responseForFrequency \(frequencyToInspect)")
+//Swift.print(" from inside responseForFrequency \(frequencyToInspect)")
 //Swift.print("degrees shift \(degreesShift)")
-Swift.print("sensitivity for frequency is \(sensitivityForFrequency)")
+// Swift.print("sensitivity for frequency is \(sensitivityForFrequency)")
 //Swift.print("********************************************")
         
         if sensitivityForFrequency < 0.0001 {sensitivityForFrequency = 0.0177827941}

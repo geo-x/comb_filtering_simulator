@@ -18,6 +18,7 @@
 		5EB2BEC61FABC8B4002DE424 /* CombFilteringResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BEC51FABC8B4002DE424 /* CombFilteringResponse.swift */; };
 		5EB2BEC81FAC3D38002DE424 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BEC71FAC3D38002DE424 /* Extensions.swift */; };
 		5EB2BECA1FAD32A3002DE424 /* CombResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BEC91FAD32A3002DE424 /* CombResponseView.swift */; };
+		5EB2BECE1FAEF3F4002DE424 /* ResultantGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB2BECD1FAEF3F4002DE424 /* ResultantGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		5EB2BEC51FABC8B4002DE424 /* CombFilteringResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CombFilteringResponse.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5EB2BEC71FAC3D38002DE424 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5EB2BEC91FAD32A3002DE424 /* CombResponseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombResponseView.swift; sourceTree = "<group>"; };
+		5EB2BECD1FAEF3F4002DE424 /* ResultantGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultantGridView.swift; path = ../ResultantGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				5E7EFE161FA8069800347312 /* Assets.xcassets */,
 				5E7EFE181FA8069900347312 /* Main.storyboard */,
 				5E7EFE3D1FA8308500347312 /* LogGridView.swift */,
+				5EB2BECD1FAEF3F4002DE424 /* ResultantGridView.swift */,
 				5EB2BEC91FAD32A3002DE424 /* CombResponseView.swift */,
 				5EB2BEC51FABC8B4002DE424 /* CombFilteringResponse.swift */,
 				5EB2BEC71FAC3D38002DE424 /* Extensions.swift */,
@@ -275,6 +278,7 @@
 				5E7EFE151FA8069800347312 /* ViewController.swift in Sources */,
 				5E7EFE131FA8069800347312 /* AppDelegate.swift in Sources */,
 				5E7EFE3E1FA8308500347312 /* LogGridView.swift in Sources */,
+				5EB2BECE1FAEF3F4002DE424 /* ResultantGridView.swift in Sources */,
 				5E7EFE401FA9B61700347312 /* bits.swift in Sources */,
 				5EB2BECA1FAD32A3002DE424 /* CombResponseView.swift in Sources */,
 			);

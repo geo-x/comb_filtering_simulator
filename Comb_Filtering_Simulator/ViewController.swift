@@ -18,6 +18,15 @@ var phaseShiftForFrequency:Float = 0.0
 
 
 class ViewController: NSViewController {
+    
+    @IBOutlet weak var combResponseView: CombResponseView!
+    @IBAction func timeDelay(_ sender: NSTextField) {
+        
+        polarResponse.timeDelay = sender.floatValue
+       combResponseView.setNeedsDisplay(combResponseView.bounds)
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

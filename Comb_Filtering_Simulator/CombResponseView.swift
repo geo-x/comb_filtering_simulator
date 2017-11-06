@@ -29,8 +29,8 @@ class CombResponseView: NSView {
             
            //combResponse.line(to: NSPoint(x: xPosition, y: Int(polarResponse.reponseForFrequency(frequencyToInspect:i))))
             
-  Swift.print("frequency = \(i)")
-  Swift.print("~~~~~~~~~")
+//Swift.print("frequency = \(i)")
+//Swift.print("~~~~~~~~~")
 //Swift.print("i = \(i)  ->  x = \(xPosition) y = \(polarResponse.reponseForFrequency(frequencyToInspect:i))")
         }
         
