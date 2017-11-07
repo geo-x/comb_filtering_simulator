@@ -61,7 +61,7 @@ class CombFilteringResponse: NSObject {
         phaseShiftForFrequency = phaseShiftForFrequency.truncatingRemainder(dividingBy: 360.0) //keep phase shift between 0 and 360
         
         if phaseShiftForFrequency > 180 { phaseShiftForFrequency =  360 - phaseShiftForFrequency} // keep in positive range
-        
+        if phaseShiftForFrequency > 177 { phaseShiftForFrequency =  180} // to draw cancellations for in between values
         
 //Swift.print("-- ...inside this method the frquency is ->\(frequencyToInspect) the phase shift for the call on this func was -> \(phaseShiftForFrequency)")
         return phaseShiftForFrequency
@@ -75,12 +75,14 @@ class CombFilteringResponse: NSObject {
         let degreesShift = phaseShift(frequencyToInspect: frequencyToInspect)
        
         var sensitivityForFrequency = (sin((90 + (degreesShift/2)).degreesToRadians)) * 2  //relative sensitity from 0 to 2
+        
 //Swift.print(" from inside responseForFrequency \(frequencyToInspect)")
 //Swift.print("degrees shift \(degreesShift)")
 // Swift.print("sensitivity for frequency is \(sensitivityForFrequency)")
 //Swift.print("********************************************")
         
-        if sensitivityForFrequency < 0.0001 {sensitivityForFrequency = 0.0177827941}
+        if sensitivityForFrequency < 0.001 {sensitivityForFrequency = 0.0177827941}
+        //if sensitivityForFrequency < 0.0001 {sensitivityForFrequency = 0.0177827941}
         return(20 * log10(sensitivityForFrequency) )
         
         
